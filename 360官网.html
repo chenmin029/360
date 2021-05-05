@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			.nav{
+				width: 1200px;
+				height: 50px;
+				/* background-color: darkgray; */
+				margin: 0 auto;
+			}
+			.nav1{
+				width: 500px;
+				height: 50px;
+				/* background-color: red; */
+				float: left;
+				
+			}
+			.nav1 img{
+				width: 500px;
+				height: 50px;
+			}
+			.nav2{
+				width: 400px;
+				height: 50px;
+				/* background-color: blue; */
+				float: left;
+				
+			}
+			.nav2 ul li{
+				margin: 0 10px;
+				line-height: 50px;
+				
+				font-size: 15px;
+				font-weight: bold;
+				font-family: 微软雅黑;
+				color: #999;
+				
+				float: left;
+			}
+			.nav3{
+				width: 300px;
+				height: 50px;
+				/* background-color: orange; */
+				
+				
+				float: right;
+				
+			}
+			.nav31{
+				width: 150px;
+				height: 50px;
+				
+				float: right;
+			}
+			.nav31 img{
+				width: 150px;
+				height: 50px;
+			}
+			
+			.container{
+				width: 1200px;
+				height: 700px;
+				margin: 0 auto;
+				
+				position: relative;
+				
+			}
+			.main{
+				width: 1200px;
+				height: 700px;
+				background: url(360img/bg_1.jpg);
+				background-size: 100% 100%;
+				
+				position: absolute;
+				/* margin: 0 auto; */
+			}
+			.barcode{
+				width: 180px;
+				height: 190px;
+				background: url(360img/index.png) -995px -60px;
+				margin: 0 auto;
+				
+				position: absolute;
+				left: 950px;
+				top: 0;
+			}
+			.discribe{
+				width: 450px;
+				height: 100px;
+				
+				margin: 150px auto;
+				
+				background: url(360img/iconlist_1.png) -870px -170px;
+			}
+			.balls{
+				width: 1200px;
+				height: 173px;
+				
+				margin: 100px auto;
+				/* background-color: #0000FF; */
+				
+				position: relative;
+			}
+			
+			.ball1{
+				width: 173px;
+				height: 173px;
+				border-radius: 50%;
+				background: url(360img/yuan.png) 0 0;
+				overflow: hidden;
+				position: absolute;
+				left: 150px;
+				
+				animation: movie1 1s linear;
+			}
+			@keyframes movie1{
+				from{left: 0;}
+				to{
+					transform: rotate(360deg) translate(0);
+				}
+			}
+			.ball2{
+				width: 173px;
+				height: 173px;
+				border-radius: 50%;
+				background: url(360img/yuan.png) -173px 0;
+				overflow: hidden;
+				position: absolute;
+				left: 300px;
+				
+				animation: movie2 2s linear;
+			}
+			@keyframes movie2{
+				from{left: 0;}
+				to{
+					transform: rotate(360deg) translate(0);
+				}
+			}
+			.ball3{
+				width: 173px;
+				height: 173px;
+				border-radius: 50%;
+				background: url(360img/yuan.png) -346px 0;
+				overflow: hidden;
+				position: absolute;
+				left: 450px;
+				
+				animation: movie3 3s linear;
+			}
+			@keyframes movie3{
+				from{left: 0;}
+				to{
+					transform: rotate(360deg) translate(0);
+				}
+			}
+			.ball4{
+				width: 173px;
+				height: 173px;
+				border-radius: 50%;
+				background: url(360img/yuan.png) -519px 0;
+				overflow: hidden;
+				position: absolute;
+				left: 600px;
+				
+				animation: movie4 4s linear;
+			}
+			@keyframes movie4{
+				from{left: 0;}
+				to{
+					transform: rotate(360deg) translate(0);
+				}
+			}
+			.ball5{
+				width: 173px;
+				height: 173px;
+				border-radius: 50%;
+				background: url(360img/yuan.png) -692px 0;
+				overflow: hidden;
+				position: absolute;
+				left: 750px;
+				
+				animation: movie5 5s linear;
+			}
+			@keyframes movie5{
+				from{left: 0;}
+				to{
+					transform: rotate(360deg) translate(0);
+				}
+			}
+			.remind{
+				width: 1000px;
+				height: 560px;
+				margin: 0 auto;
+				border: 1px solid black;
+			}
+			.remindtext{
+				width: 1000px;
+				height: 200px;
+				background: url(360img/index.png) -180px -620px;
+			}
+			.remindimg{
+				width: 1000px;
+				height: 360px;
+				
+				/* background-color: #0000FF; */
+			}
+			.remindimgtop,.remindimgdown{
+				width: 1000px;
+				height: 180px;
+				
+				/* background-color: red; */
+				
+				position: relative;
+			}
+			.remindimgtop1{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -1655px 0;
+				border-radius: 50%;
+				
+				position: absolute;
+				left: 180px;
+				top: 10px;
+			}
+			.remindimgtopcover{
+				/* content: ""; */
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background-color: black;
+				opacity: 0.2;
+				/* border: 1px solid red; */
+				
+				transform: scale(1);
+				
+				transition: all 0.1s linear;
+			}
+			.remindimgtop1:hover .remindimgtopcover{
+				transform: scale(0);
+			}
+			.remindimgtop2{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -1818px 0;
+				border-radius: 50%;
+				/* border: 1px solid #000000; */
+				overflow: hidden;
+				
+				position: absolute;
+				left: 340px;
+				top: 10px;
+			}
+			.remindimgtop2:hover .remindimgtopcover{
+				/* transform: scale(0); */
+				transform-origin: left;
+				transform: translate(-150px);
+			}
+			.remindimgtop3{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -1980px 0;
+				border-radius: 50%;
+				overflow: hidden;
+				
+				position: absolute;
+				left: 500px;
+				top: 10px;
+			}
+			.remindimgtop3:hover .remindimgtopcover{
+				/* transform: scale(0); */
+				transform-origin: left bottom; 
+				transform: rotate(90deg);
+			}
+			.remindimgtop4{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -2145px 0;
+				border-radius: 50%;
+				overflow: hidden;
+				
+				position: absolute;
+				left: 660px;
+				top: 10px;
+			}
+			.remindimgtop4:hover .remindimgtopcover{
+				/* transform: scale(0); */
+				transform-origin: bottom;
+				transform: translateY(-150px);
+			}
+			.remindimgdown1{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -1748px -150px;
+				position: absolute;
+				left: 255px;
+				top: 10px;
+			}
+			.remindimgdown1:hover .remindimgtopcover{
+				transform: scale(0);
+			}
+			.remindimgdown2{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -1910px -150px;
+				position: absolute;
+				left: 415px;
+				top: 10px;
+			}
+			.remindimgdown2:hover .remindimgtopcover{
+				transform: scale(0);
+			}
+			.remindimgdown3{
+				width: 150px;
+				height: 150px;
+				background: url(360img/iconlist_2.png) -2070px -150px;
+				position: absolute;
+				left: 575px;
+				top: 10px;
+			}
+			.remindimgdown3:hover .remindimgtopcover{
+				transform: scale(0);
+			}
+			.callrec{
+				width: 1200px;
+				height: 600px;
+				/* background-color: #0000FF; */
+				margin: 0 auto;
+				background: url(360img/bg_2.jpg);
+				background-size: 100% 100%;
+				
+				position: relative;
+			}
+			.callrecdisc{
+				width: 550px;
+				height: 300px;
+				background: url(360img/iconlist_2.png) 0 -100px;
+				
+				position: absolute;
+				top: 150px;
+				left: 0;
+			}
+			.callrecdiscphone{
+				width: 300px;
+				height: 550px;
+				background: url(360img/iconlist_2.png) -550px 0;
+				
+				position: absolute;
+				top: 25px;
+				left: 550px;
+			}
+			.callrecdiscphone:hover{
+				animation: moviephone 5s linear infinite alternate;
+			}
+			@keyframes moviephone{
+				from{
+					transform: rotate(0);
+				}
+				to{
+					transform: rotate(20deg);
+				}
+			}
+			.show{
+				width: 1000px;
+				height: 550px;
+				background: url(360img/bg_3.jpg) no-repeat;
+				border: 1px solid black;
+				
+				margin: 0 auto;
+			}
+			.mykey{
+				width: 1200px;
+				height: 600px;
+				margin: 0 auto ;
+				
+				background: url(360img/bg_4.jpg);
+				background-size: 100% 100%;
+				
+				position: relative;
+			}
+			.mykeyphone{
+				width: 250px;
+				height: 530px;
+				background: url(360img/iconlist_2.png) -910px 0;
+				/* border: 1px solid red; */
+				
+				position: absolute;
+				top: 25px;
+				left: 400px;
+				
+			}
+			.mykeyphone:hover{
+				animation: mykeyphonemovie 1s linear infinite alternate;
+			}
+			@keyframes mykeyphonemovie{
+				from{
+					transform: rotate(0);
+				}
+				to{
+					transform: rotate(-20deg);
+				}
+			}
+			.mykeydis{
+				width: 450px;
+				height: 550px;
+				background: url(360img/iconlist_2.png) -1200px 0;
+				/* border: 1px solid red; */
+				
+				position: absolute;
+				top: 25px;
+				left: 650px;
+			}
+			.alldisc{
+				width: 1000px;
+				height: 400px;
+				border: 1px solid black;
+				margin: 0 auto;
+			}
+			.alldisctop{
+				width: 1000px;
+				height: 200px;
+				margin: 0 auto;
+				
+				position: relative;
+			}
+			.alldisctopimg1{
+				width: 80px;
+				height: 80px;
+				background: url(360img/iconlist_3.png) 0 0;
+				border-radius: 50%;
+				/* border: 1px solid black; */
+				
+				position: absolute;
+				top: 50px;
+				left: 5px;
+			}
+			.alldisctopimg1:hover .alldisccover{
+				transform: scale(1);
+			}
+			.alldisctopimg1::after{
+				content: "";
+				width: 250px;
+				height: 100px;
+				background: url(./360img/index.png) -250px -3300px;
+				/* border: 1px solid black; */
+				
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			.alldisctopimg2{
+				width: 80px;
+				height: 80px;
+				background: url(360img/iconlist_3.png) -85px 0;
+				border-radius: 50%;
+				
+				position: absolute;
+				top: 50px;
+				left: 330px;
+			}
+			.alldisctopimg2:hover .alldisccover{
+				transform: scale(1);
+			}
+			.alldisctopimg2::after{
+				content: "";
+				width: 250px;
+				height: 100px;
+				background: url(./360img/index.png) -590px -3300px;
+				
+				
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			.alldisctopimg3{
+				width: 80px;
+				height: 80px;
+				background: url(360img/iconlist_3.png) -170px 0;
+				border-radius: 50%;
+				
+				position: absolute;
+				top: 50px;
+				left: 660px;
+			}
+			.alldisctopimg3:hover .alldisccover{
+				transform: scale(1);
+			}
+			.alldisctopimg3::after{
+				content: "";
+				width: 250px;
+				height: 100px;
+				background: url(./360img/index.png) -930px -3300px;
+				/* border: 1px solid black; */
+				
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			
+			.alldiscdown{
+				width: 1000px;
+				height: 200px;
+				margin: 0 auto;
+				
+				position: relative;
+			}
+			
+			.alldiscdownimg1{
+				width: 80px;
+				height: 80px;
+				background: url(360img/iconlist_3.png) 0 -86px;
+				border-radius: 50%;
+				
+				position: absolute;
+				top: 50px;
+				left: 5px;
+			}
+			.alldiscdownimg1:hover .alldisccover{
+				transform: scale(1);
+			}
+			.alldiscdownimg1::after{
+				content: "";
+				width: 250px;
+				height: 100px;
+				background: url(./360img/index.png) -250px -3480px;
+				/* border: 1px solid black; */
+				
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			
+			.alldiscdownimg2{
+				width: 80px;
+				height: 80px;
+				background: url(360img/iconlist_3.png) -85px -86px;
+				border-radius: 50%;
+				
+				position: absolute;
+				top: 50px;
+				left: 330px;
+			}
+			.alldiscdownimg2:hover .alldisccover{
+				transform: scale(1);
+			}
+			.alldiscdownimg2::after{
+				content: "";
+				width: 250px;
+				height: 100px;
+				background: url(./360img/index.png) -590px -3480px;
+				
+				
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			
+			.alldiscdownimg3{
+				width: 80px;
+				height: 80px;
+				background: url(360img/iconlist_3.png) -170px -86px;
+				border-radius: 50%;
+				
+				position: absolute;
+				top: 50px;
+				left: 660px;
+			}
+			.alldiscdownimg3:hover .alldisccover{
+				transform: scale(1);
+			}
+			.alldiscdownimg3::after{
+				content: "";
+				width: 250px;
+				height: 100px;
+				background: url(./360img/index.png) -930px -3480px;
+				
+				
+				position: absolute;
+				top: 0;
+				left: 80px;
+			}
+			.alldisccover{
+				width: 80px;
+				height: 80px;
+				background-color: black;
+				opacity: 0.4;
+				border-radius: 50%;
+				
+				transform: scale(0);
+			}
+			.footer{
+				width: 1200px;
+				height: 180px;
+				margin: 0 auto;
+				border: 1px solid #000000;
+				background: url(360img/index.png) 0 -3700px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav1">
+				<img src="360img/360img.png" >
+			</div>
+			<div class="nav2">
+				<ul>
+					<li>首页</li>
+					<li>常见问题</li>
+					<li>支持机型</li>
+					<li>官方微博</li>
+					<li>官方论坛</li>
+				</ul>
+			</div>
+			<div class="nav3">
+				<div class="nav31">
+					<img src="360img/android.png" >
+				</div>
+				<div class="nav31">
+					<img src="360img/apple.png" >
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="main">
+				<div class="discribe">
+					
+				</div>
+				<div class="balls">
+					<div class="ball1">
+						
+					</div>
+					<div class="ball2">
+						
+					</div>
+					<div class="ball3">
+						
+					</div>
+					<div class="ball4">
+						
+					</div>
+					<div class="ball5">
+						
+					</div>
+				</div>
+			</div>
+			<div class="barcode">
+				
+			</div>
+		</div>
+		<div class="remind">
+			<div class="remindtext">
+				
+			</div>
+			<div class="remindimg">
+				<div class="remindimgtop">
+					<div class="remindimgtop1">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+					
+					<div class="remindimgtop2">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+					<div class="remindimgtop3">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+					<div class="remindimgtop4">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+				</div>
+				<div class="remindimgdown">
+					<div class="remindimgdown1">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+					<div class="remindimgdown2">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+					<div class="remindimgdown3">
+						<div class="remindimgtopcover">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="callrec">
+			<div class="callrecdisc">
+				
+			</div>
+			<div class="callrecdiscphone">
+				
+			</div>
+		</div>
+		<div class="show">
+			
+		</div>
+		<div class="mykey">
+			<div class="mykeyphone">
+				
+			</div>
+			<div class="mykeydis">
+				
+			</div>
+		</div>
+		<div class="alldisc">
+			<div class="alldisctop">
+				<div class="alldisctopimg1">
+					<div class="alldisccover">
+						
+					</div>
+				</div>
+				<div class="alldisctopimg2">
+					<div class="alldisccover">
+						
+					</div>
+				</div>
+				<div class="alldisctopimg3">
+					<div class="alldisccover">
+						
+					</div>
+				</div>
+			</div>
+			<div class="alldiscdown">
+				<div class="alldiscdownimg1">
+					<div class="alldisccover">
+						
+					</div>
+				</div>
+				<div class="alldiscdownimg2">
+					<div class="alldisccover">
+						
+					</div>
+				</div>
+				<div class="alldiscdownimg3">
+					<div class="alldisccover">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>
